@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express and Tailwind Starter</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        });
+    </script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-teal-400 dark:from-gray-800 dark:to-gray-700">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-white mb-4 dark:text-gray-300">Starter</h1>
+            <p class="text-lg text-white dark:text-gray-400">Starter app with Tailwind and Express.js</p>
+            <button onclick="toggleTheme()" class="mt-8 px-4 py-2 bg-white text-gray-800 dark:bg-gray-600 dark:text-gray-300 rounded-lg">
+                Change Theme
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
