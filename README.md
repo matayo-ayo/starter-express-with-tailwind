@@ -1,5 +1,9 @@
 # Node Express Starter with Tailwind CSS
 
+![Screenshot](public/img/hero.png)
+
+---
+
 This project is a starter template for building web applications using Node.js, Express, and Tailwind CSS. It includes a basic Express server setup and Tailwind CSS configuration with automatic building and watching for changes.
 
 ## Table of Contents
@@ -61,7 +65,8 @@ node-express-starter/
 │   └── index.js
 |
 ├── public/
-│   ├── icons/
+│   └── img/
+│      └── hero.png
 │   └── styles/
 │      ├── tailwind.css
 │      └── style.css
